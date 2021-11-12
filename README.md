@@ -1,14 +1,4 @@
 # React I ❤️
-
-Conteúdo da aula: 
->> vamos aprender um dos conteúdos mais queridinhos do mercado, o react. Vamos conhecer um pouco do universo dessa ferramenta incrível, os conceitos fundamentais e criar nossos primeiros projetinhos. 🚀
-
-1) Apresentação e recadinho inicial da {Profa}
-2) O que é e quem usa react?
-3) Olá, Mundo! Criando e entendendo meu primeiro projeto react (npm/yarn, create react app, react.render, estrutura de pastas, apagando arquivos padrão)
-4) Componentes em react e jsx
-5) Props
-
 ## `Chamada, apresentação das monitoras e acordos`
 <img src="https://i.pinimg.com/474x/b4/17/86/b41786b5e7627ed0c678a0ef4a62e9f6.jpg" alt="video chamada" width="200">
 
@@ -18,16 +8,26 @@ Conteúdo da aula:
 * Manter câmera ligada o máximo possível
 * Momento mão no código, momento de olho na tela
 
+Conteúdo da aula: 
+>> vamos aprender um dos conteúdos mais queridinhos do mercado, o react. Vamos conhecer um pouco do universo dessa ferramenta incrível, os conceitos fundamentais e criar nossos primeiros projetinhos. 🚀
+
+1) Apresentação da {Profa}
+2) O que é e quem usa react?
+3) Olá, Mundo! Criando e entendendo meu primeiro projeto react (npm/yarn, create react app, react.render, estrutura de pastas, apagando arquivos padrão)
+4) Componentes em react e jsx
+5) Props
+6) Listas e Keys
+
 <br>
 <br>
 
-## {Profa} Simara Conceição
+## 1) {Profa} Simara Conceição
 
   <img src="https://media.giphy.com/media/efhcZv18NpQDyRsaYa/giphy.gif" alt="Gif Yeah" width="200">
 
 Desenvolvedora na ThoughtWorks e criadora do Podcast Quero Ser Dev.
 
-## O que é e quem usa react?
+## 2) O que é e quem usa react?
 
 Já imaginou se você pudesse aprender a programar com a tecnologia que o Facebook, Instagram, WhatsApp, Twitter, Netflix, Airbnb, Notion, Trello, Tiktok e muitas outras gigantes usam? O que mudaria de possibilidades e oportunidades para sua carreira? Já parou pra refletir sobre isso?
 
@@ -47,7 +47,7 @@ Na prática, quando alguém clica num botão para abrir uma página nova, o que 
 
 Eu sei que ainda tá muito abstrato pra visualizar, mas daqui a pouquinho vai fazer mais sentido. Confia em mim e vamos que vamos!
 
-## Olá, Mundo!
+## 3) Olá, Mundo!
 
 Eu sou uma pessoa supersticiosa e me contaram que toda vez que a gente está aprendendo alguma tecnologia nova, dá sorte começar com um hello world! Então vamos nessa! rs
 
@@ -83,7 +83,7 @@ Vamos fazer isso!
 
 3) Ele irá abrir um navegador sozinho usando a porta localhost:3000 e é lá que você consegue ter uma pré de como sua SPA está ficando.
 
-4) Perceba que ele rodou uma págima pronta. Tharam! A gente só precisou rodar alguns pequenos comandos no terminal, certo? Vamos trocar esse conteúdo pelo nosso hello world. Vá até src > App.js (Apague a div e tudo que está dentro dela e escreva no lugar <h1>Hello, World!</h1> Salve e volte para o navegador! Uhullllll, agora vamos começar com o pé direito a entender todas essas pastas, arquivos e como estamos escrevendo num arquivo javascript e fazendo aparecer no html. <3
+4) Perceba que ele rodou uma págima pronta. Tharam! A gente só precisou rodar alguns pequenos comandos no terminal, certo? Vamos trocar esse conteúdo pelo nosso hello world. Vá até src > App.js (Apague a div e tudo que está dentro dela e escreva no lugar <h1>Hello, World!</h1> Salve e volte para o navegador! Uhullllll, agora vamos começar com tudooo a entender todas essas pastas, arquivos e como estamos escrevendo num arquivo javascript e fazendo aparecer no html. <3
 
 5) 
 > node_modules
@@ -101,7 +101,7 @@ Vamos fazer isso!
   >> app.css
 
 
-## Componentes em react e jsx
+## 4) Componentes em react e jsx
 
 Em react tudo é componente!
 Pequenas partes onde podemos encapsular/guardar códigos e reutilizar sempre que necessário.
@@ -152,7 +152,7 @@ export default Title
 | --- | --- |
 | `Relogio` |  Vamos criar um componente que retorna nosso horário local|
 
-## Props
+## 5) Props
 
 Lembra do componente de perfil que a gente tá supondo que o instagram deve ter?
 Como será que eles fazem pra mudar os conteúdos sempre que identificam que estamos mudando de perfil ao acessar?
@@ -161,6 +161,24 @@ Uma das soluções para fazer isso seria usando as props, ou propriedades.
 
 Vamos à prática.
 Temos o componente Title que para cada página esse título irá mudar. A gente não precisa criar um h1 toda vez e criar todo estilo novamente. Vamos encapsular em um componente e permitir que por props ele receba conteúdos diferentes para o mesmo componente.
+
+```
+Em html:
+// <img src='' />
+// <span>publicações</span>
+
+Props em react:
+//props.texto
+//<Subtitulo texto='publicações'/>
+//<Subtitulo texto='seguidores'/>
+//<Subtitulo texto='seguindo'/>
+
+//props.children
+//<Subtitulo>publicações</Subtitulo>
+//<Subtitulo>seguidores</Subtitulo>
+//<Subtitulo>seguindo</Subtitulo>
+
+```
 
 ```
 function Title(props) {
@@ -211,8 +229,10 @@ function App() {
 ```
 
 **Exercícios:**
-
 | 01 | Descrição |
+| --- | --- |
+| `Intagram: Title e SubTitle` |  Agora vamos criar dois componentes Title e SubTitle simulando informações por props para perfil de instagram (nome/publicações/seguidores/seguindo). |
+| 02 | Descrição |
 | --- | --- |
 | `UpperCase` |  Agora vamos criar um componente UpperCase que transforma em CapsLock qualquer texto passado por props. |
 
@@ -220,9 +240,78 @@ function App() {
 | --- | --- |
 | `LowerCase` |  Agora vamos criar um componente LowerCase que transforma em minúsculo qualquer texto passado por props.|
 
+
+## 6) Listas e Keys (criando e mapeando dados no React)
+
+Talvez você esteja se sentindo um pouco confusa e se perguntando quando finalmente vai criar um projetinho inteiro e que faça sentido. Calma! Dando spoiler, nossas últimas serão para a criação de um projeto lindão, mas até lá estou te preparando pra entender os principais conceitos de react que iremos usar.
+
+Agora chegou a vez de entendermos como lidar com listas no React. Imagina que internamente tenhamos um array de objetos de filmes assim:
+
+```
+const filmes = [
+    {
+      id: 1,
+      nome: "The Social Dilemma",
+      genero: "documentário",
+      capa: "https://static.wixstatic.com/media/00d1a3_e8a01dfe8cf0489d8ed6001d1ab6286f~mv2.jpeg/v1/fill/w_1000,h_1500,al_c,q_90,usm_0.66_1.00_0.01/00d1a3_e8a01dfe8cf0489d8ed6001d1ab6286f~mv2.jpeg"
+
+    },
+    {
+      id: 2,
+      nome: "Us",
+      genero: "terror",
+      capa: "https://upload.wikimedia.org/wikipedia/en/0/00/Us_%282019%29_theatrical_poster.png"
+
+    },
+    {
+      id: 3,
+      nome: "Bubble Boy",
+      genero: "comédia romântica",
+      capa: "https://images-na.ssl-images-amazon.com/images/I/51hCG-ULh5L._AC_SY445_.jpg"
+
+    },
+    {
+      id: 4,
+      nome: "Get Out",
+      genero: "terror",
+      capa: "https://miro.medium.com/max/675/0*afTCZX9mMynUvqi2.jpg"
+
+    }
+
+]
+
+export default filmes
+```
+Qual seria a melhor forma de pegar esses dados e passar para nosso componente Lista que irá aparecer na nossa tela tipo na netflix, rs. Bem tipo mesmo! haha
+
+```
+import filmes from '../Services/dados'
+
+const Lista = () =>{
+    return(
+        <div>
+            {filmes.map(filme => 
+                <div>
+                    <h1 key={filme.id}>
+                        {filme.nome}
+                    </h1>
+                    <p>
+                        {filme.genero}
+                    </p>
+                    <img alt={filme.nome} src={filme.capa}/>
+                </div>
+            )
+                
+            }
+        </div>
+    )
+}
+
+export default Lista
+```
 _______
 
-**Exemplos:**
+**Outros Exemplos:**
 
 
 | Exemplo 1 | Descrição |
